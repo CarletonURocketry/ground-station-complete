@@ -1,0 +1,21 @@
+services:
+  ground-station:
+    build: ground-station
+    ports:
+      - "33845:33845"
+    restart: on-failure
+  tile_server:
+    build: tile-server
+    volumes:
+      - ./tile-server/mapping_tiles:/usr/src/app/mapping_tiles:ro
+    ports:
+      - "8000:80"
+    restart: on-failure
+  ground-station-ui:
+    build: ground-station-ui
+    ports:
+      - "3000:3000"
+    depends_on:
+      - ground-station
+      - tile_server
+    restart: unless-stopped
