@@ -1,0 +1,8 @@
+[submodule "ground-station"]
+	path = ground-station
+	url = https://github.com/CarletonURocketry/ground-station
+	branch = main
+[submodule "ground-station-ui"]
+	path = ground-station-ui
+	url = https://github.com/CarletonURocketry/ground-station-ui
+	branch = main
