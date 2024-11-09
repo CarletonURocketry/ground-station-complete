@@ -6,7 +6,7 @@ This repo can be used to easily deploy the full ground station using [Docker Com
 ## Setup
 Because this repository uses git submodules, the setup is a little different than it is for regular repositories. In brief, the submodules in this repo are "pointers" to repositories elsewhere in the org and they must be initialized and populated in addition to being cloned. 
 
-If you've haven't yet cloned the repository, you can use `git clone --recurse-submodules <url>` to automatically intialize and update the submodules. If you've already cloned the repository, you can use `git submodule init` and `git submodule update` or `git submodule update --init` to initialize and update the submodules. Finally, run `git submodule update --remote --merge` to fetch the latest changes to the main branch for each submodule. 
+If you've haven't yet cloned the repository, you can use `git clone --recurse-submodules https://github.com/CarletonURocketry/ground-station-complete.git` to automatically intialize and update the submodules. If you've already cloned the repository, you can use `git submodule init` and `git submodule update` or `git submodule update --init` to initialize and update the submodules. Finally, run `git submodule update --remote --merge` to fetch the latest changes to the main branch for each submodule. 
 
 Note that because the tile images for the tile server are stored in this repo for convenience, this repo might take a few minutes to clone.
 
