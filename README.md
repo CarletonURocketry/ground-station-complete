@@ -20,3 +20,5 @@ First, follow the installation guides for [Docker](https://docs.docker.com/get-d
 To run the Python backend, React frontend and nginx tile server, use `docker compose up &`. If it is your first time running this command, it should take a few minutes to build the images, successive runs should execute much faster.
 
 The frontend can be accessed at http://localhost:3000/ and the backend can be accessed at http://localhost:33845/. If you're really interested, the tiling server can be accessed at http://localhost:8000/ but you also can only query for the images directly.
+
+When developping using this repo and docker compose, you're going to have to rebuild the compose when trying out new changes. To do this, run `docker compose build` while the containers aren't running. This should be relatively quick if the images have already been built.
