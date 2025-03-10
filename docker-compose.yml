@@ -2,6 +2,8 @@ services:
   ground-station:
     build: ground-station
     privileged: true
+    devices:
+      - ${DEVICE_PATH}:${DEVICE_PATH}
     ports:
       - "33845:33845"
     restart: on-failure
