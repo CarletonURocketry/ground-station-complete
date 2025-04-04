@@ -1,6 +1,9 @@
 services:
   ground-station:
     build: ground-station
+    privileged: true
+    devices:
+      - ${DEVICE_PATH}:${DEVICE_PATH}
     ports:
       - "33845:33845"
     restart: on-failure
@@ -14,7 +17,7 @@ services:
   ground-station-ui:
     build: ground-station-ui
     ports:
-      - "3000:3000"
+      - "4173:4173"
     depends_on:
       - ground-station
       - tile_server
