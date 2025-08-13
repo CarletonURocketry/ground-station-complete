@@ -11,6 +11,7 @@ services:
     build: tile-server
     volumes:
       - ./tile-server/mapping_tiles:/usr/src/app/mapping_tiles:ro
+      - ./tile-server/elevation_tiles:/usr/src/app/elevation_tiles:ro
     ports:
       - "8000:80"
     restart: on-failure
