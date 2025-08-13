@@ -4,6 +4,8 @@ services:
     privileged: true
     devices:
       - ${DEVICE_PATH}:${DEVICE_PATH}
+    volumes:
+      - ./ground-station/missions:/app/ground-station/missions
     ports:
       - "33845:33845"
     restart: on-failure
